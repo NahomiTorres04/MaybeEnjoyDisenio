@@ -4,168 +4,194 @@
     box-sizing: border-box;
 }
 
+
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
-}
-.main{
-    float: left;
-    width: 100%;
-    clear: both;
 }
 .cabecera{
     position: fixed;
     float: left;
     width: 100%;
     margin-top: 0;
-    padding: 15px 0px;
-    background: rgba(0,0,0,0.3);
+    padding: 0px 0px;
 }
-.box{
-    flex: 1;
-    overflow: hidden;
-    margin: 8px;
-    height: 500px;
-    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
-    line-height: 0;
-    transition: all 300ms;
-}
-.box > img{
-    width: 200%;
-    height: calc(100% - 10vh);
-    object-fit: cover;
-    transition: all 300ms;
-}
-
-.box > span{
-    font-size: 30px;
-    display: block;
-    text-align: center;
-    height: 10vh;
-    line-height: 2.6;
-    color: white;
-}
-
-.box:hover{
-    flex: 15%;
-
-}
-
-.box:hover > img{
-    width: 100%;
-    height: 100%;
-}
-
-.container{
-    width: 1200px;
-    margin: 0px auto;
-}
-.contenedor{
-    margin-top: 0;
-    display: flex;
-    width: 100%;
-    height: 30%;
-    padding: 4% 2%;
-    box-sizing: border-box;
+.flogo {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-image: url(img/log.png);
+    background-size: cover;
 }
 .logo{
-    float: left;
+    display: inline;
 }
 .logo h1{
+    position: fixed;
+    margin-top: 25px;
+    margin-left: 150px;
     font-family: 'Montez', cursive;
-    color: white;
+    font-size: 25px;
+    color: black;
+    mix-blend-mode: multiply;
 }
 .menus{
     float: right;
 }
 .menus ul{
-    margin-top: 5px;
+    margin-top: 25px;
 }
 .menus ul li{
     display: inline;
     margin: 0px 15px;
 }
-.menu ul li a{
+.menus ul li a{
     font-family: 'Josefin Slab', serif;
     font-size: 20px;
     color: white;
     text-decoration: none;
 }
-.general{
-    float: left;
+
+/*CONTENIDO EN GENERAL*/
+.pantallaprincipal{
     width: 100%;
-    padding: 90px 0px;
-    background-image: url("img/MaybeEnjoy.jpg");
+    height: 100vh;
+    background-image: url("img/fcafe.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
 }
-.bebidas{
-    float: left;
-    width: 100%;
-    padding: 350px 0px;
-    background-image: url("img/calientesb.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+
+.container-TituloG .titulo {
+    width: calc(100vw - 20px);
+    height: 100vh;
+    font-family: 'Montez', cursive;
+    font-size: 200px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.snacks{
-    float: left;
+
+/* NAVBAR MENU GENERAL*/
+.menugeneral{
+    background-color: black ;
     width: 100%;
-    padding: 350px 0px;
-    background-image: url("img/bocadillos.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Josefin Slab', serif;
+    color:white;
+    margin-bottom: 60px;
+    text-decoration: none;
 }
-.combos{
-    float: left;
-    width: 100%;
-    padding: 350px 0px;
-    background-image: url("img/comida.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.menugeneral a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 25px;
+    background-color: black ;
+    margin: 0 10px;
+    transition: .5s ease all;
+    color: white; 
 }
-.postres{
-    float: left;
+.menugeneral a:hover{
+    transform: translateY(18px);
+    background-color: gainsboro;
+    text-decoration: none;
+    color: black;
+}
+
+/*BEBIDAS*/
+.nosotros{
+    margin-bottom: 60px;
+
+}
+.nosotros .subtitulo{
+    font-size: 35px;
+    color: black;
+    font-family: 'Be Vietnam', sans-serif;
+    font-weight: 700;
+    z-index: 2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.nosotros p{
+    font-size: 20px;
+}
+
+.subtitulo{
+    font-size: 20px;
+    color: black;
+    font-family: 'Be Vietnam', sans-serif;
+    font-weight: 700;
+    z-index: 2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.subtitulo span{
+    background-color: gainsboro;
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+}
+.subtitulo::after{
+    content: "";
+    display: inline-block;
+    height: 2px;
     width: 100%;
-    padding: 350px 0px;
-    background-image: url("img/postres.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background: black;
+    position: relative;
+    top: -29px;
+    z-index: 1;
+}
+.menubebidas{
+    background: gainsboro;
+    padding: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 
-h2{
+
+
+/*TARJETAS*/
+.tarjeta h2{
     font-family: 'Pacifico', cursive;
-    color: #000;
+    color: white;
 }
-h3{
+.tarjeta h3{
     font-family: 'Be Vietnam', sans-serif;
-    color: #000;
+    color:white;
 }
-h4{
+.tarjeta h4{
     font-family: 'Be Vietnam', sans-serif;
-    color: #000;
+    color: white;
 }
 .wrap{
-    width: 1100px;
-    margin: 50px auto;
+    width: auto;
+    margin: 0px auto;
     display: flex;
     justify-content: center;
 }
 .tarjeta-wrap{
+    display: flex;
+    justify-content: center;
     margin: 10px;
     -webkit-perspective: 800;
     perspective: 800;
 }
 .tarjeta{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     /*background: rgb(224, 221, 220);*/
-    background:white;
+    background:black;
     position: relative;
     transform-style: preserve-3d;
     transition: .7s ease;
@@ -199,9 +225,9 @@ h4{
  }
  .texto{
     justify-content: center;
-    padding: 65px;
+    padding: 12px;
     text-align: center;
-    color: #000;
+    color: white;
     /*font-family: 'Liu Jian Mao Cao', cursive;*/
     font-family: 'Indie Flower', cursive;
  }
@@ -214,15 +240,39 @@ h4{
     background-image: url(img/capuchino.jpg);
          
 }
-
 .t2{
-    background-image: url(img/cafenegro.jpg);
-}
-
-.t3{
-    background-image: url(img/cafefrio.jpg);
-}
-
-.t4{
     background-image: url(img/Te.jpg);
+         
+}
+
+/*SEPARADOR*/
+.separador{
+    width: 100%;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.separador p{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-family: 'Be Vietnam', sans-serif;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+.s1{
+    background-image: url(img/calientesb.jpg);
+}
+.s2{
+    background-image: url(img/bocadillos.jpg);
+}
+.s3{
+    background-image: url(img/postres.jpg);
+}
+.s4{
+    background-image: url(img/comida.jpg)
 }
